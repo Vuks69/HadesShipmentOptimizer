@@ -1,9 +1,5 @@
-from navigation import Navigation
-from shipment import Shipment
-from transport import Transport
 from location import Location
-import random as rand
-
+from navigation import Navigation
 
 """
 The problem presented:
@@ -15,7 +11,7 @@ Transports may start and end their jobs on ANY nodes.
 The logic should implement the basic behaviour of the Shipment Computer module, which automatically
 picks up and delivers shipments as the Transports move through their designated path.
 """
-
+print('Creating navmap weighted graph...')
 num_shipments = 16
 names = ["Haura", "Endor", "Zadaa", "Zadaa I", "Zadaa II", "My Mixtape", "My Mixtape I", "Neptune", "Neptune I"]
 locations = [Location(n) for n in names]
@@ -32,6 +28,9 @@ distances = [
 	[0, 0, 0, 0, 0, 0, 0, 0, 0]
 ]
 nav = Navigation(locations, distances)
+print('Navmap created')
+print('Initializing shipments...')
+# TODO prepare some shipments for testing purposes - use random with a set seed to analyse future results
 # For every location...
 # for loc in locations:
 # 	# ...add a set amount of shipments...
@@ -42,13 +41,16 @@ nav = Navigation(locations, distances)
 # 			if dest != loc:
 # 				break
 # 		starmap.create_shipment(loc, dest, rand.randint(30, 200))
-#
-# # Now, let's test some of the basic shipment handling
-# # transports = [Transport('Zadaa') for _ in range(3)]
-# tran = Transport('Zadaa')
-# tran.relocate('Haura')
-# # tran.add_shipment()
-# DONE figure out how to add shipments to graph???
-# TODO rework the entire logic structure, this thing isn't going to work in current state, ever
-# TODO figure out a proper way of representing the data
-#  is a graph the only way possible? maybe just use it for baseline navigation and distance finder
+print('Shipments initialized')
+print('Initializing Transport ships...')
+# TODO spawn some transports - one should be good enough for early testing.
+#  not sure how to deal with 3 ships working simultaneously, but hey, that's a job for future me working on SComputer
+print('Transports initialized')
+print('Firing up the Shipment Computer...')
+# TODO berate past me for starting this project, also implement basic SComputer logic, path testing
+#  and some way to return an optimized path
+# note: trying to set a full, 15-node path might not even work - I might have to resort to manually imputting the path
+# right after the transport passes a node and does its shipment magic
+# bonus TODO add an approximation of expected hydrogen costs for all the hauling around
+print('Shipment Computer blew up')
+
