@@ -1,16 +1,13 @@
 from shipment import Shipment
-from transport import Transport
 
 
 class Location:
 	name: str
 	shipments: [Shipment]
-	stationed_ships: [Transport]
 
-	def __init__(self, name, shipments=None, stationed_ships=None):
+	def __init__(self, name, shipments=None):
 		self.name = name
 		self.shipments = shipments or []
-		self.stationed_ships = stationed_ships or []
 
 	def add_shipment(self, to_add: Shipment):
 		self.shipments.append(to_add)
