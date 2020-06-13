@@ -34,11 +34,3 @@ class Starmap:
 
 
 # At this point we have a complete, weighed graph representing the Yellow Star map, with all planets and moons.
-# TODO figure out how to add shipments to graph???
-# TODO figure out a proper way of representing the data
-#  is a graph the only way possible? maybe just use it for baseline navigation and distance finder
-# TODO find an algorithm to get efficient paths
-#  3 ships with 5 max cargo each, every shipment weighs 1, find most efficient way to distribute all shipments
-#  to where they belong. most efficient = least total distance OR least total paths taken
-# TODO study and replicate Shipment Computer module behavior
-
