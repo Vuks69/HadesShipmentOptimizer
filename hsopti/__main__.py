@@ -52,4 +52,3 @@ nav = Navigation(locations, distances)
 # TODO rework the entire logic structure, this thing isn't going to work in current state, ever
 # TODO figure out a proper way of representing the data
 #  is a graph the only way possible? maybe just use it for baseline navigation and distance finder
-# TODO study and replicate Shipment Computer module behavior
