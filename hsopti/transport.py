@@ -14,7 +14,8 @@ class Transport:
 
     def relocate(self, to_where: str) -> (int, int):
         self.location = to_where
-        return self.check_and_delete_shipments(to_where)
+        ret = self.check_and_delete_shipments(to_where)
+        return ret
 
     def add_shipment(self, shipment: Shipment) -> bool:
         if len(self.cargo) < 5:

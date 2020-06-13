@@ -1,8 +1,11 @@
+from location import Location
+
+
 class Shipment:
-	destination: str
+	destination: Location
 	value: int
 
-	def __init__(self, destination: str, value: int = None):
+	def __init__(self, destination: Location, value: int = None):
 		self.destination = destination
 		if value is None:
 			self.value = 0
